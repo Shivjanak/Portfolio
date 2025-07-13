@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(4, 97, 219, 0.822);
+        }
+        
+        .project-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0788df;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div class="flex justify-between h-16"></div>
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-500">PORTFOLIO</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 animate-fade-in">Hi, I'm <span class="text-blue-500">Shivjanak patel</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-black-600 mb-6 animate-fade-in delay-1">Frontend Developer</h2>
+                    <p class="text-black-600 mb-8 animate-fade-in delay-2">I craft beautiful, responsive websites with modern technologies. Passionate about creating intuitive user experiences with clean, efficient code.</p>
+                    <div class="flex space-x-4 animate-fade-in delay-3">
+                        <a href="#projects" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md transition duration-300">View Work</a>
+                        <a href="mailto:patelshivjanak@gmail.com" class="border border-blue-500 text-blue-500 hover:bg-blue-50 px-6 py-2 rounded-md transition duration-300">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-fade-in delay-4">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-full overflow-hidden shadow-xl">
+                            <img src="photo.jpg" alt="Professional web developer portrait in modern office environment" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+                            <p class="text-sm font-medium text-gray-700">1+ Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Skills</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Technologies I work with and frameworks I'm proficient in</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Skill Cards -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fab fa-html5 text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">HTML5</h3>
+                    <p class="text-gray-600 text-sm">Semantic markup, accessibility, modern standards</p>
+                </div>
+                
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fab fa-css3-alt text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">CSS3</h3>
+                    <p class="text-gray-600 text-sm">Flexbox, Grid, animations, responsive design</p>
+                </div>
+                
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fab fa-js text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">JavaScript</h3>
+                    <p class="text-gray-600 text-sm">ES6+, DOM manipulation, async programming</p>
+                </div>
+                
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fab fa-react text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">React</h3>
+                    <p class="text-gray-600 text-sm">Hooks, Context API, component architecture</p>
+                </div>
+                
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fab fa-node-js text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Node.js</h3>
+                    <p class="text-gray-600 text-sm">Express, REST APIs, server-side logic</p>
+                </div>
+                
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-database text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">MySQL</h3>
+                    <p class="text-gray-600 text-sm">NoSQL databases, schema design, queries</p>
+                </div>
+                
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fab fa-git-alt text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Git</h3>
+                    <p class="text-gray-600 text-sm">Version control, GitHub, collaboration</p>
+                </div>
+                
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-paint-brush text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">UI/UX</h3>
+                    <p class="text-gray-600 text-sm">Wireframing, prototyping, user flows</p>
+                </div>
+                
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-bolt text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Performance</h3>
+                    <p class="text-gray-600 text-sm">Optimization, lazy loading, caching</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A selection of my recent work</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="project-image overflow-hidden">
+                        <img src="project.png" alt="Photo Studio websites" class="w-full h-48 object-cover hover:scale-105 transition duration-500" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Photo Studio Website Dashboard</h3>
+                        <p class="text-gray-600 mb-4">User Interface to Book Photographers as per their requirement.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">MySQL</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-500 hover:text-blue-700 font-medium">View Live</a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
